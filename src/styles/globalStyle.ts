@@ -1,7 +1,11 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyle = createGlobalStyle`
-	margin:0;
-	padding:0;
-	box-sizing:border-box;
+const GlobalStyle = createGlobalStyle`
+	body{
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+	}
 `
+
+export default GlobalStyle
