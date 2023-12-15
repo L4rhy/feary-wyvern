@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.base{
+	@apply h-screen w-screen bg-cyan-200 
+}
+.nav{
+	@apply h-auto w-screen bg-purple-300 flex flex-row gap-6 p-2 border-b-2 border-purple-400
+}
+.bnt{
+	@apply h-auto text-4xl bg-transparent text-cyan-200 p-3 border-2 rounded-md border-cyan-200 hover:bg-cyan-200 hover:text-purple-300
+}
+.login{
+	@apply h-5/6 w-full flex flex-col justify-evenly items-center
+}
+.input{
+	@apply h-auto w-2/3 text-4xl bg-transparent placeholder:text-cyan-200 p-3 border-2 rounded-md border-cyan-200 outline-none focus:bg-cyan-200 focus:text-purple-300 
+}

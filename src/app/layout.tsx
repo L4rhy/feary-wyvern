@@ -1,14 +1,13 @@
-'use client'
+import type { Metadata } from 'next'
+import { Amatic_SC } from 'next/font/google'
+import './globals.css'
 
-import { Raleway } from 'next/font/google'
-import StyledComponentsRegistry from '@/lib/registry'
-import GlobalStyle from '@/styles/globalStyle'
-import { ThemeProvider } from 'styled-components'
-import { THEME } from '@/themes'
+const amatic_SC = Amatic_SC({ subsets:["latin"], weight:'400'})
 
-
-
-const raleway = Raleway({ subsets: ['latin'] })
+export const metadata: Metadata = {
+  title: 'Feary Wyvern Home',
+  description: 'Pagina Inicial do VTT Feary Wyvern',
+}
 
 export default function RootLayout({
   children,
@@ -16,22 +15,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="UTF-8">
-			<head>
-				<title>Feary Wyvern</title>
-				<link 
-				rel='icon'
-				type='image/svg+xml'
-				href='favico.svg'/>
-			</head>
-      <body className={raleway.className}>
-				<StyledComponentsRegistry>
-					<ThemeProvider theme={THEME}>
-						<GlobalStyle/>
-						{children}
-					</ThemeProvider>
-				</StyledComponentsRegistry>
-			</body>
+    <html lang="en">
+      <body className={amatic_SC.className}>{children}</body>
     </html>
   )
 }
